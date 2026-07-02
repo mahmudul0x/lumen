@@ -18,9 +18,7 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">
-          পৃষ্ঠাটি খুঁজে পাওয়া যায়নি
-        </h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">পৃষ্ঠাটি খুঁজে পাওয়া যায়নি</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           আপনি যে পৃষ্ঠাটি খুঁজছেন সেটি সরানো হয়েছে অথবা কখনো ছিল না।
         </p>
@@ -101,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "apple-touch-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -120,7 +118,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "Organization",
               name: "Lumen Builders Ltd.",
               url: "/",
-              logo: "/favicon.ico",
+              logo: "/apple-touch-icon.png",
               slogan: "We Build Trust, We Build Dreams.",
               telephone: "+8801711381422",
               email: "hrlumenbuilders@gmail.com",

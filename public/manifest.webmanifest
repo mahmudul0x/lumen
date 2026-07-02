@@ -9,7 +9,8 @@
   "theme_color": "#0B2D6B",
   "lang": "bn",
   "icons": [
-    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" },
-    { "src": "/apple-touch-icon.png", "sizes": "500x500", "type": "image/png" }
+    { "src": "/favicon.ico", "sizes": "256x256", "type": "image/x-icon" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

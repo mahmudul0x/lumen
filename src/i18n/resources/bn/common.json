@@ -66,13 +66,6 @@
   "shell": {
     "skipToMain": "মূল কনটেন্টে যান"
   },
-  "lang": {
-    "switcherLabel": "ভাষা নির্বাচন",
-    "bn": "বাংলা",
-    "en": "English",
-    "bnShort": "বাংলা",
-    "enShort": "EN"
-  },
   "status": {
     "loading": "লোড হচ্ছে…",
     "error": "কিছু একটা সমস্যা হয়েছে",

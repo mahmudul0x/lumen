@@ -2,10 +2,9 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import projectGalaxy from "@/assets/project-galaxy.jpg";
-import projectJolchaya from "@/assets/project-jolchaya.jpg";
 import projectSkyline from "@/assets/project-skyline.jpg";
 import projectHorizon from "@/assets/project-horizon.jpg";
 import projectEmerald from "@/assets/project-emerald.jpg";
@@ -28,36 +27,25 @@ const slides: Slide[] = [
       "রংপুরের প্রাইম লোকেশনে আন্তর্জাতিক মানের প্রিমিয়াম অ্যাপার্টমেন্ট — নিরাপদ, স্বচ্ছ ও দীর্ঘমেয়াদী বিনিয়োগ।",
   },
   {
-    image: projectJolchaya,
-    eyebrow: "Lumen Jolchaya — শাপলা চত্বর",
-    title: "শহরের হৃদয়ে,",
-    gold: "প্রিমিয়াম জীবনযাত্রা।",
-    subtitle:
-      "প্রতিটি ইউনিটে আধুনিক ইন্টেরিয়র, প্রশস্ত ব্যালকনি ও প্রকৃতির সাথে যুক্ততা।",
-  },
-  {
     image: projectSkyline,
     eyebrow: "Lumen Skyline Heights",
     title: "উঁচু আকাশের নিচে,",
     gold: "নতুন দিগন্ত।",
-    subtitle:
-      "১৮-তলা লাইফস্টাইল টাওয়ার — সুইমিং পুল, স্কাই লাউঞ্জ ও কমিউনিটি সেন্টার সহ।",
+    subtitle: "১৮-তলা লাইফস্টাইল টাওয়ার — সুইমিং পুল, স্কাই লাউঞ্জ ও কমিউনিটি সেন্টার সহ।",
   },
   {
     image: projectHorizon,
     eyebrow: "Lumen Horizon — সম্পন্ন প্রকল্প",
     title: "সময়মতো হস্তান্তর,",
     gold: "আজীবন বিশ্বাস।",
-    subtitle:
-      "চুক্তিমতো নির্মাণ, নির্ধারিত সময়ে চাবি হস্তান্তর — এটাই আমাদের প্রতিশ্রুতি।",
+    subtitle: "চুক্তিমতো নির্মাণ, নির্ধারিত সময়ে চাবি হস্তান্তর — এটাই আমাদের প্রতিশ্রুতি।",
   },
   {
     image: projectEmerald,
     eyebrow: "Lumen Emerald Court",
     title: "বুটিক রেসিডেন্স,",
     gold: "নীরব বিলাসিতা।",
-    subtitle:
-      "সীমিত সংখ্যক পরিবারের জন্য তৈরি — গোপনীয়তা, সৌন্দর্য ও নিরাপত্তার নিখুঁত ভারসাম্য।",
+    subtitle: "সীমিত সংখ্যক পরিবারের জন্য তৈরি — গোপনীয়তা, সৌন্দর্য ও নিরাপত্তার নিখুঁত ভারসাম্য।",
   },
 ];
 
@@ -84,7 +72,7 @@ export function HeroSlider() {
   const active = slides[selected];
 
   return (
-    <section className="relative isolate h-[100svh] min-h-[640px] w-full overflow-hidden bg-primary text-white">
+    <section className="relative isolate h-[86svh] min-h-120 w-full overflow-hidden bg-primary text-white sm:h-[92svh] sm:min-h-140 md:h-[100svh] md:min-h-160">
       {/* Slides — image only, Ken Burns zoom */}
       <div ref={emblaRef} className="absolute inset-0 h-full w-full">
         <div className="flex h-full">
@@ -106,10 +94,9 @@ export function HeroSlider() {
 
       {/* Luxury dark gradient overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,45,107,0.45)_0%,rgba(11,45,107,0.55)_35%,rgba(0,0,0,0.75)_100%)]" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-2/3 bg-[linear-gradient(90deg,rgba(0,0,0,0.65),transparent)]" />
 
       {/* Content */}
-      <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-24 pt-40 md:pb-32">
+      <div className="container-luxury relative z-10 flex h-full flex-col items-center justify-center pb-16 pt-20 text-center sm:pb-20 sm:pt-24 md:pb-24 md:pt-40">
         <AnimatePresence mode="wait">
           <motion.div
             key={selected}
@@ -117,79 +104,80 @@ export function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-4xl"
+            className="flex max-w-4xl flex-col items-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md sm:gap-2 sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.22em]">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
               {active.eyebrow}
             </span>
-            <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 text-balance text-3xl font-bold leading-[1.1] sm:mt-6 sm:text-4xl md:text-6xl lg:text-7xl">
               {active.title}
               <br />
               <span className="text-gold">{active.gold}</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/85 sm:mt-6 sm:text-base md:text-lg">
               {active.subtitle}
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button asChild variant="gold" size="xl">
+            <div className="mt-7 flex w-full flex-col items-center gap-3 xs:w-auto xs:flex-row xs:flex-wrap xs:justify-center sm:mt-9">
+              <Button
+                asChild
+                variant="gold"
+                size="lg"
+                className="w-full xs:w-auto md:h-14 md:px-9 md:text-base"
+              >
                 <Link to="/projects/ongoing">
                   প্রকল্প দেখুন <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="xl" className="bg-white text-primary hover:bg-white/90">
-                <Link to="/booking">বুকিং করুন</Link>
-              </Button>
               <Button
                 asChild
-                variant="outline"
-                size="xl"
-                className="border-white/40 bg-white/5 text-white backdrop-blur hover:bg-white hover:text-primary"
+                size="lg"
+                className="w-full bg-white text-primary hover:bg-white/90 xs:w-auto md:h-14 md:px-9 md:text-base"
               >
-                <Link to="/brochure">
-                  <Download className="h-4 w-4" /> ব্রোশিওর ডাউনলোড
-                </Link>
+                <Link to="/booking">বুকিং করুন</Link>
               </Button>
             </div>
           </motion.div>
         </AnimatePresence>
+      </div>
 
-        {/* Controls */}
-        <div className="mt-12 flex items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => scrollTo(i)}
-                aria-label={`স্লাইড ${i + 1}`}
-                className={`h-[3px] rounded-full transition-all duration-500 ${
-                  selected === i ? "w-14 bg-gold" : "w-8 bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
-            <span className="ml-4 text-xs font-medium tracking-widest text-white/70">
-              {String(selected + 1).padStart(2, "0")}
-              <span className="mx-1 text-white/40">/</span>
-              {String(slides.length).padStart(2, "0")}
-            </span>
-          </div>
-          <div className="hidden gap-2 md:flex">
+      {/* Arrows — vertically centered, pinned to each side edge */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 right-0 z-10 hidden items-center justify-between px-4 md:flex md:px-8">
+        <button
+          onClick={prev}
+          aria-label="আগের স্লাইড"
+          className="pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-primary"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          onClick={next}
+          aria-label="পরের স্লাইড"
+          className="pointer-events-auto grid h-12 w-12 place-items-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-primary"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Dots — centered at the very bottom */}
+      <div className="absolute inset-x-0 bottom-5 z-10 flex flex-col items-center gap-2 sm:bottom-8 sm:gap-3 md:bottom-10">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {slides.map((_, i) => (
             <button
-              onClick={prev}
-              aria-label="আগের স্লাইড"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-primary"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={next}
-              aria-label="পরের স্লাইড"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/25 bg-white/5 text-white backdrop-blur transition hover:border-gold hover:bg-gold hover:text-primary"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
+              key={i}
+              onClick={() => scrollTo(i)}
+              aria-label={`স্লাইড ${i + 1}`}
+              className={`h-[3px] rounded-full transition-all duration-500 ${
+                selected === i ? "w-10 bg-gold sm:w-14" : "w-6 bg-white/40 hover:bg-white/70 sm:w-8"
+              }`}
+            />
+          ))}
         </div>
+        <span className="text-[11px] font-medium tracking-widest text-white/70 sm:text-xs">
+          {String(selected + 1).padStart(2, "0")}
+          <span className="mx-1 text-white/40">/</span>
+          {String(slides.length).padStart(2, "0")}
+        </span>
       </div>
     </section>
   );

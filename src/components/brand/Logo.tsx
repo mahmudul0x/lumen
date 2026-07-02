@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import logoAsset from "@/assets/lumen-logo.png.asset.json";
+import logoUrl from "@/assets/lumen-logo.png";
 import "@/i18n/config";
 
 type Props = { variant?: "light" | "dark"; compact?: boolean };
@@ -20,11 +20,11 @@ export function Logo({ variant = "dark", compact = false }: Props) {
         aria-hidden
       >
         <img
-          src={logoAsset.url}
+          src={logoUrl}
           alt={t("brand.fullName")}
           className="relative h-12 w-auto object-contain drop-shadow-[0_4px_12px_rgba(11,45,107,0.25)] sm:h-14 lg:h-16"
-          width={128}
-          height={128}
+          width={500}
+          height={500}
         />
       </span>
       {!compact && (

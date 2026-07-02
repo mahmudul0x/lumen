@@ -75,6 +75,9 @@
   /* Container */
   --container-desktop: 1440px;
   --container-laptop: 1280px;
+
+  /* Breakpoints — xs covers small phones below Tailwind's default sm (640px) */
+  --breakpoint-xs: 420px;
 }
 
 :root {
@@ -211,6 +214,13 @@
     max-width: 1440px;
     padding-inline: 2rem;
   }
+}
+
+/* Skips layout/paint work for off-screen sections so long pages scroll smoothly.
+   contain-intrinsic-size reserves space up front so the scrollbar doesn't jump. */
+@utility cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 @utility shadow-soft {

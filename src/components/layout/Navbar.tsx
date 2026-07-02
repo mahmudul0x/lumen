@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/brand/Logo";
 import { primaryNav } from "@/lib/site";
 import { Button } from "@/components/ui/button";
-import { LanguageToggle } from "./LanguageToggle";
 import "@/i18n/config";
 
 export function Navbar() {
@@ -23,7 +22,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transform-[translateZ(0)] transition-[background-color,box-shadow] duration-300 ${
         scrolled
           ? "border-b border-border/60 bg-background/85 backdrop-blur-xl shadow-soft"
           : "bg-background/60 backdrop-blur-sm"
@@ -49,7 +48,6 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <LanguageToggle />
           <Button asChild variant="gold" size="lg">
             <Link to="/booking">{t("cta.bookNow")}</Link>
           </Button>
@@ -77,16 +75,16 @@ export function Navbar() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                  onClick={() => {
+                    setOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                   className="rounded-2xl px-4 py-3 text-[15px] font-bold text-foreground hover:bg-surface-strong"
                 >
                   {t(item.labelKey, { defaultValue: item.label })}
                 </Link>
               ))}
 
-              <div className="mt-3 flex justify-center">
-                <LanguageToggle />
-              </div>
               <Button asChild variant="gold" size="lg" className="mt-3">
                 <Link to="/booking" onClick={() => setOpen(false)}>
                   {t("cta.bookNow")}

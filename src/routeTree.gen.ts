@@ -48,7 +48,6 @@ import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsOngoingRouteImport } from './routes/projects.ongoing'
 import { Route as ProjectsCompletedRouteImport } from './routes/projects.completed'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
-import { Route as ApiTranslateRouteImport } from './routes/api/translate'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AdminAdminRouteImport } from './routes/_admin/admin'
 import { Route as AuthenticatedDashboardProfileRouteImport } from './routes/_authenticated/dashboard.profile'
@@ -281,11 +280,6 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => ProjectsRoute,
-} as any)
-const ApiTranslateRoute = ApiTranslateRouteImport.update({
-  id: '/api/translate',
-  path: '/api/translate',
-  getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   id: '/dashboard',
@@ -527,7 +521,6 @@ export interface FileRoutesByFullPath {
   '/videos': typeof VideosRoute
   '/admin': typeof AdminAdminRouteWithChildren
   '/dashboard': typeof AuthenticatedDashboardRouteWithChildren
-  '/api/translate': typeof ApiTranslateRoute
   '/projects/$slug': typeof ProjectsSlugRouteWithChildren
   '/projects/completed': typeof ProjectsCompletedRoute
   '/projects/ongoing': typeof ProjectsOngoingRoute
@@ -605,7 +598,6 @@ export interface FileRoutesByTo {
   '/videos': typeof VideosRoute
   '/admin': typeof AdminAdminRouteWithChildren
   '/dashboard': typeof AuthenticatedDashboardRouteWithChildren
-  '/api/translate': typeof ApiTranslateRoute
   '/projects/$slug': typeof ProjectsSlugRouteWithChildren
   '/projects/completed': typeof ProjectsCompletedRoute
   '/projects/ongoing': typeof ProjectsOngoingRoute
@@ -687,7 +679,6 @@ export interface FileRoutesById {
   '/videos': typeof VideosRoute
   '/_admin/admin': typeof AdminAdminRouteWithChildren
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRouteWithChildren
-  '/api/translate': typeof ApiTranslateRoute
   '/projects/$slug': typeof ProjectsSlugRouteWithChildren
   '/projects/completed': typeof ProjectsCompletedRoute
   '/projects/ongoing': typeof ProjectsOngoingRoute
@@ -768,7 +759,6 @@ export interface FileRouteTypes {
     | '/videos'
     | '/admin'
     | '/dashboard'
-    | '/api/translate'
     | '/projects/$slug'
     | '/projects/completed'
     | '/projects/ongoing'
@@ -846,7 +836,6 @@ export interface FileRouteTypes {
     | '/videos'
     | '/admin'
     | '/dashboard'
-    | '/api/translate'
     | '/projects/$slug'
     | '/projects/completed'
     | '/projects/ongoing'
@@ -927,7 +916,6 @@ export interface FileRouteTypes {
     | '/videos'
     | '/_admin/admin'
     | '/_authenticated/dashboard'
-    | '/api/translate'
     | '/projects/$slug'
     | '/projects/completed'
     | '/projects/ongoing'
@@ -1007,7 +995,6 @@ export interface RootRouteChildren {
   TestimonialsRoute: typeof TestimonialsRoute
   ThankYouRoute: typeof ThankYouRoute
   VideosRoute: typeof VideosRoute
-  ApiTranslateRoute: typeof ApiTranslateRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1284,13 +1271,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/projects/$slug'
       preLoaderRoute: typeof ProjectsSlugRouteImport
       parentRoute: typeof ProjectsRoute
-    }
-    '/api/translate': {
-      id: '/api/translate'
-      path: '/api/translate'
-      fullPath: '/api/translate'
-      preLoaderRoute: typeof ApiTranslateRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/_authenticated/dashboard': {
       id: '/_authenticated/dashboard'
@@ -1753,7 +1733,6 @@ const rootRouteChildren: RootRouteChildren = {
   TestimonialsRoute: TestimonialsRoute,
   ThankYouRoute: ThankYouRoute,
   VideosRoute: VideosRoute,
-  ApiTranslateRoute: ApiTranslateRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

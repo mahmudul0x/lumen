@@ -4,7 +4,6 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { AnnouncementBar } from "./AnnouncementBar";
 import { FloatingCTAs } from "@/components/leads/FloatingCTAs";
-import { DomTranslator } from "@/lib/i18n/DomTranslator";
 
 import "@/i18n/config";
 
@@ -20,10 +19,11 @@ export function SiteShell({ children }: { children: ReactNode }) {
       </a>
       <AnnouncementBar />
       <Navbar />
-      <main id="main-content" className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">
+        {children}
+      </main>
       <Footer />
       <FloatingCTAs />
-      <DomTranslator />
     </div>
   );
 }

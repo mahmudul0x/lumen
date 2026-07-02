@@ -1,0 +1,14 @@
+{
+  "name": "Lumen Builders Ltd.",
+  "short_name": "Lumen",
+  "description": "স্বপ্নের বাড়ি, নিজেই গড়ি — Lumen Builders Ltd., রংপুর।",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F6F2",
+  "theme_color": "#0B2D6B",
+  "lang": "bn",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}

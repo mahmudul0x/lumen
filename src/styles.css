@@ -1,0 +1,246 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Lumen Builders Ltd. — Luxury Real Estate Design System
+ * Brand: Deep Corporate Blue + Luxury Gold + Emerald
+ * Typography: Hind Siliguri (Bengali) + Poppins (English)
+ */
+
+@theme inline {
+  /* Radii — brand-specific luxury curves */
+  --radius: 18px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-4xl: 40px;
+
+  /* Semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-gold-soft: var(--gold-soft);
+  --color-emerald: var(--emerald);
+  --color-emerald-foreground: var(--emerald-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+
+  /* Chart / sidebar (kept for shadcn compatibility) */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography */
+  --font-bengali: "Hind Siliguri", "Poppins", system-ui, sans-serif;
+  --font-english: "Poppins", "Hind Siliguri", system-ui, sans-serif;
+  --font-sans: "Hind Siliguri", "Poppins", system-ui, sans-serif;
+  --font-display: "Poppins", "Hind Siliguri", system-ui, sans-serif;
+
+  /* Container */
+  --container-desktop: 1440px;
+  --container-laptop: 1280px;
+}
+
+:root {
+  /* Neutrals */
+  --background: oklch(0.985 0.003 240);           /* #F8F9FA */
+  --foreground: oklch(0.22 0.01 260);              /* #1B1B1B tuned */
+  --surface: oklch(1 0 0);                          /* #FFFFFF */
+  --surface-strong: oklch(0.965 0.005 240);         /* #EEF2F5 */
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.01 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.01 260);
+
+  /* Brand — Deep Corporate Blue #0B2D6B */
+  --primary: oklch(0.32 0.14 265);
+  --primary-foreground: oklch(0.99 0.003 240);
+  --primary-soft: oklch(0.94 0.03 265);
+
+  /* Secondary — light surface */
+  --secondary: oklch(0.965 0.005 240);
+  --secondary-foreground: oklch(0.32 0.14 265);
+
+  /* Gold — Luxury Gold #D9A520 */
+  --gold: oklch(0.78 0.15 85);
+  --gold-foreground: oklch(0.22 0.01 260);
+  --gold-soft: oklch(0.95 0.06 85);
+
+  /* Emerald — Accent #0E7C4A */
+  --emerald: oklch(0.5 0.12 155);
+  --emerald-foreground: oklch(0.99 0.003 240);
+
+  --muted: oklch(0.965 0.005 240);
+  --muted-foreground: oklch(0.5 0.015 260);
+  --accent: oklch(0.95 0.06 85);
+  --accent-foreground: oklch(0.32 0.14 265);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0.003 240);
+  --border: oklch(0.92 0.008 255);
+  --input: oklch(0.93 0.008 255);
+  --ring: oklch(0.78 0.15 85);
+
+  /* Luxury shadows */
+  --shadow-soft: 0 2px 8px -2px oklch(0.32 0.14 265 / 0.06), 0 4px 20px -8px oklch(0.32 0.14 265 / 0.08);
+  --shadow-card: 0 8px 30px -12px oklch(0.32 0.14 265 / 0.12);
+  --shadow-float: 0 20px 60px -20px oklch(0.32 0.14 265 / 0.18);
+  --shadow-gold: 0 12px 40px -12px oklch(0.78 0.15 85 / 0.35);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, oklch(0.32 0.14 265), oklch(0.42 0.14 265));
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.15 85), oklch(0.72 0.16 75));
+  --gradient-hero: linear-gradient(180deg, oklch(0.32 0.14 265 / 0.85), oklch(0.22 0.10 265 / 0.55));
+
+  --chart-1: oklch(0.32 0.14 265);
+  --chart-2: oklch(0.78 0.15 85);
+  --chart-3: oklch(0.5 0.12 155);
+  --chart-4: oklch(0.6 0.1 220);
+  --chart-5: oklch(0.7 0.12 45);
+
+  --sidebar: oklch(0.99 0.003 240);
+  --sidebar-foreground: oklch(0.22 0.01 260);
+  --sidebar-primary: oklch(0.32 0.14 265);
+  --sidebar-primary-foreground: oklch(0.99 0.003 240);
+  --sidebar-accent: oklch(0.965 0.005 240);
+  --sidebar-accent-foreground: oklch(0.32 0.14 265);
+  --sidebar-border: oklch(0.92 0.008 255);
+  --sidebar-ring: oklch(0.78 0.15 85);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 265);
+  --foreground: oklch(0.98 0.003 240);
+  --surface: oklch(0.20 0.03 265);
+  --surface-strong: oklch(0.24 0.03 265);
+  --card: oklch(0.20 0.03 265);
+  --card-foreground: oklch(0.98 0.003 240);
+  --popover: oklch(0.20 0.03 265);
+  --popover-foreground: oklch(0.98 0.003 240);
+  --primary: oklch(0.78 0.15 85);
+  --primary-foreground: oklch(0.18 0.02 265);
+  --primary-soft: oklch(0.30 0.08 265);
+  --secondary: oklch(0.26 0.04 265);
+  --secondary-foreground: oklch(0.98 0.003 240);
+  --gold: oklch(0.82 0.15 85);
+  --gold-foreground: oklch(0.18 0.02 265);
+  --gold-soft: oklch(0.30 0.08 85);
+  --emerald: oklch(0.65 0.14 155);
+  --emerald-foreground: oklch(0.18 0.02 265);
+  --muted: oklch(0.26 0.04 265);
+  --muted-foreground: oklch(0.72 0.02 260);
+  --accent: oklch(0.30 0.08 85);
+  --accent-foreground: oklch(0.98 0.003 240);
+  --destructive: oklch(0.65 0.20 27);
+  --destructive-foreground: oklch(0.98 0.003 240);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.78 0.15 85);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-bengali);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bengali);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--gold);
+    color: var(--gold-foreground);
+  }
+}
+
+@utility container-luxury {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 1280px;
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding-inline: 2rem;
+  }
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility shadow-float {
+  box-shadow: var(--shadow-float);
+}
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+@utility bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+@utility bg-gradient-gold {
+  background-image: var(--gradient-gold);
+}
+@utility bg-gradient-hero {
+  background-image: var(--gradient-hero);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-33.3333%, 0, 0); }
+}
+

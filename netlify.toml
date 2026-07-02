@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "20"
+
+# Nitro's netlify preset generates the function handler in .netlify/functions-internal/
+# automatically; Netlify's build system picks it up from there regardless of `publish`.
+# SPA/SSR fallback is handled by dist/_redirects (auto-generated).

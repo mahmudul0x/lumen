@@ -1,0 +1,82 @@
+{
+  "brand": {
+    "name": "Lumen Builders",
+    "fullName": "Lumen Builders Ltd.",
+    "tagline": "Invest in Living · Ltd.",
+    "taglineLong": "স্বপ্নের বাড়ি, নিজেই গড়ি, এক সাথে জমি কিনি",
+    "sloganEn": "We Build Trust, We Build Dreams."
+  },
+  "nav": {
+    "home": "হোম",
+    "about": "আমাদের সম্পর্কে",
+    "ongoing": "চলমান প্রকল্প",
+    "completed": "সম্পন্ন প্রকল্প",
+    "apartments": "ফ্ল্যাট",
+    "landShare": "জমি শেয়ার",
+    "gallery": "গ্যালারি",
+    "contact": "যোগাযোগ",
+    "blog": "ব্লগ",
+    "careers": "ক্যারিয়ার",
+    "testimonials": "গ্রাহকদের মতামত",
+    "booking": "বুকিং",
+    "downloads": "ডাউনলোড",
+    "faq": "সাধারণ প্রশ্ন",
+    "privacy": "গোপনীয়তা নীতি",
+    "terms": "শর্তাবলি",
+    "menu": "মেনু",
+    "toHome": "Lumen Builders Ltd. — হোম"
+  },
+  "cta": {
+    "bookNow": "বুকিং করুন",
+    "bookVisit": "সাইট ভিজিট বুক করুন",
+    "requestCallback": "কলব্যাক রিকোয়েস্ট",
+    "downloadBrochure": "ব্রোশিওর ডাউনলোড",
+    "emiCalculator": "EMI ক্যালকুলেটর",
+    "viewDetails": "বিস্তারিত দেখুন",
+    "viewAll": "সব দেখুন",
+    "subscribe": "সাবস্ক্রাইব",
+    "send": "পাঠান",
+    "readMore": "আরও পড়ুন",
+    "getStarted": "শুরু করুন",
+    "contactUs": "যোগাযোগ করুন"
+  },
+  "footer": {
+    "newsletterEyebrow": "নিউজলেটার",
+    "newsletterTitle": "নতুন প্রকল্প ও অফার সবার আগে জানুন",
+    "newsletterDesc": "ইমেইলে পান — নতুন লঞ্চ, প্রি-লঞ্চ প্রাইস ও এক্সক্লুসিভ ইনভাইট।",
+    "emailPlaceholder": "আপনার ইমেইল",
+    "trustGroupLabel": "সার্টিফিকেশন ও ট্রাস্ট ব্যাজ",
+    "trust": {
+      "rajuk": "RAJUK/RDA অনুমোদিত",
+      "iso": "ISO 9001:2015 সার্টিফায়েড",
+      "experience": "১৫+ বছরের অভিজ্ঞতা"
+    },
+    "columns": {
+      "explore": "এক্সপ্লোর",
+      "company": "কোম্পানি",
+      "contact": "যোগাযোগ"
+    },
+    "quickActionsTitle": "দ্রুত সেবা",
+    "whatsappChat": "WhatsApp চ্যাট",
+    "hours": "শনি – বৃহঃ, সকাল ৯টা – রাত ৮টা",
+    "copyright": "সর্বস্বত্ব সংরক্ষিত",
+    "sectionOpened": "সেকশন খোলা হয়েছে",
+    "sectionClosed": "সেকশন বন্ধ হয়েছে"
+  },
+  "shell": {
+    "skipToMain": "মূল কনটেন্টে যান"
+  },
+  "lang": {
+    "switcherLabel": "ভাষা নির্বাচন",
+    "bn": "বাংলা",
+    "en": "English",
+    "bnShort": "বাংলা",
+    "enShort": "EN"
+  },
+  "status": {
+    "loading": "লোড হচ্ছে…",
+    "error": "কিছু একটা সমস্যা হয়েছে",
+    "success": "সফল হয়েছে",
+    "thanks": "ধন্যবাদ"
+  }
+}
